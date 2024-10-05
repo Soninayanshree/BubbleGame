@@ -40,6 +40,7 @@ function runtime(){
     },1000)
 }
 function makeBubble(){
+
     var clutter =""    
     for(var i = 1; i <= 102 ; i++ ){
         var rn = Math.floor(Math.random()*10);  
@@ -47,6 +48,15 @@ function makeBubble(){
     }
     document.querySelector("#panel").innerHTML = clutter;
 }
+ 
+document.querySelector("#startbtn").addEventListener("click", function(){
+    document.querySelector("#startscreen").style.display = "none";
+    document.querySelector("#main").style.display = "block";
+
+    runtime();
+    makeBubble();
+    getNewHit();
+});
 
 document.querySelector("#panel").addEventListener("click",function(dets){
     var clickedNum = Number(dets.target.textContent);
@@ -56,7 +66,13 @@ document.querySelector("#panel").addEventListener("click",function(dets){
         getNewHit()
     }
 })
-runtime()
+// runtime()
 makeBubble();
 // increaseScore();
 getNewHit();
+
+
+// document.querySelector("#panel").innerHTML=`<h1 id="start" class="go">Start Game</h1>`
+//         document.querySelector("#start").addEventListener("click",function(){
+           
+//         })

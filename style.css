@@ -8,10 +8,31 @@ html,body{
     height: 100%;
     width: 100%;
 }
+#startscreen{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(55, 190, 223, 0.445);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+#startscreen h1{
+    font-size: 50px;
+    font-weight: 300;
+}
+#startbtn{
+    padding: 5px 20px;
+    font-size: 30px;
+    border-radius: 30px;
+    background-color: rgba(39, 177, 201);
+}
 #main{
     background-color: rgba(39, 177, 201, 0.445);
     height: 100%;
     width: 100%;
+    display: none;
 }
 #mtop{
     height: 100px;
